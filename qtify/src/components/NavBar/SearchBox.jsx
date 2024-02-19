@@ -20,12 +20,11 @@ export default function SearchBox() {
     //   />
     // </div>
     <div className={styles.parent}>
-      <input
-        type="text"
+      <input        
         className={styles.search}
         placeholder="Search a album of your choice"
       />
-      <button className={styles.searchButton}>
+      <button className={styles.searchButton} type="submit">
         <SearchIcon />
       </button>
     </div>
