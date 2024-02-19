@@ -1,12 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 import Navbar from "./components/NavBar/Navbar";
-// import { StyledEngineProvider } from '@mui/material/StyledEngineProvider';
+import HeroSection from "./components/HeroSection/HeroSection";
+// import { StyledEngineProvider } from "@mui/material/StyledEngineProvider";
 
 function App() {
   return (
     // <StyledEngineProvider injectFirst>
-      <Navbar/>
+    <>
+      <Navbar />
+      <HeroSection />
+    </>
+
     // </StyledEngineProvider>
   );
 }

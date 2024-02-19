@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 270px;  
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap:30px;
+  background-color: #121212;
+  ;
+}
+
+.heading {
+  width: 556px;
+  height: 100px;
+  top: 171px;
+  left: 327px;
+}
+.heroImage {
+  width: 212px;
+  height: 212px;
+  top: 103px;
+  left: 914px;
+}
