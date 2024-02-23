@@ -12,8 +12,8 @@ const  Card= ({ type, data })=> {
       case "album": {
         const { image, follows, title, slug, songs } = data;
         return (
-          <Tooltip title={`${songs?.length} songs`} placement="top" arrow>
-            <Link to={`/album/${slug}`}>
+          // <Tooltip title={`${songs?.length} songs`} placement="top" arrow>
+            // <Link to={`/album/${slug}`}>
               <div className={styles.wrapper}>
                 <div className={styles.card}>
                   <img
@@ -33,8 +33,8 @@ const  Card= ({ type, data })=> {
                   <p>{title}</p>
                 </div>
               </div>
-            </Link>
-          </Tooltip>
+          //   </Link>
+          // </Tooltip>
         );
       }
       case "song": {
