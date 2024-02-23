@@ -11,7 +11,7 @@ const Carousel = ({ data, renderCardComponent }) => {
       <Swiper
         initialSlide={0}
         modules={{ Navigation }}
-        slidesPerView={9}
+        slidesPerView={8}
         spaceBetween={0}
         allowTouchMove
       >
