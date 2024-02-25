@@ -5,8 +5,7 @@ import Tooltip from "@mui/material/Tooltip";
 import styles from "./Card.module.css";
 import { Link } from "react-router-dom";
 
-const  Card= ({ type, data })=> {
-  console.log("card");
+const  Card= ({ type, data })=> {  
   const getCard = (type) => {
     switch (type) {
       case "album": {
@@ -37,34 +36,35 @@ const  Card= ({ type, data })=> {
           // </Tooltip>
         );
       }
-      case "song": {
+      case "songs": {
         const { image, likes, title, slug, songs } = data;
         return (
-          <Tooltip title={`songs`} placement="top" arrow>
-            <Link to={`/album/${slug}`}>
+          // <Tooltip title={`${songs?.length} songs`} placement="top" arrow>
+          //   <Link to={`/album/${slug}`}>
               <div className={styles.wrapper}>
                 <div className={styles.card}>
                   <img
                     className={styles.image}
-                    src="https://images.pexels.com/photos/4571219/pexels-photo-4571219.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=1200&w=800"
+                    src={image}
                     alt="album"
+                    loading="lazy"
                   />
                   <div className={styles.banner}>
                     <Chip
-                      label={`100 Likes`}
+                      label={`${likes} Likes`}
                       className={styles.chip}
                       size="small"
                     />
                   </div>
                 </div>
                 <div className={styles.text}>
-                  <p>New Bollywood</p>
+                  <p>{title}</p>
                 </div>
               </div>
-            </Link>
-          </Tooltip>
+          //   </Link>
+          // </Tooltip>
         );
-      }
+      }      
       default: {
         return <></>;
       }
