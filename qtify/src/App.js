@@ -6,6 +6,7 @@ import axios from "axios";
 import Section from "./components/Section/Section";
 // import { StyledEngineProvider } from "@mui/material/StyledEngineProvider";
 import FilterSection from "./components/FilterSection/FilterSection";
+import FaqSection from "./components/FAQSection/FaqSection";
 
 function App() {
   const [topAlbumData, setTopAlbumData] = useState([]);
@@ -57,7 +58,8 @@ function App() {
     fetchNewSongs();
   }, []);
 
-  const filteredData = (val) => {   
+  const filteredData = (val) => {
+    setValue(val);   
     generateFilteredSongs(val);
   };
 
@@ -92,7 +94,9 @@ function App() {
       <HeroSection />
       <div className={styles.wrapper}>
         <Section type="album" title="Top Albums" data={topAlbumData} />
+        <hr className={styles.line} />
         <Section type="album" title="New Albums" data={newAlbumData} />
+        <hr className={styles.line} />
         <FilterSection
           type="songs"
           title="Songs"          
@@ -100,6 +104,8 @@ function App() {
           filteredDataValues={filteredDataVal}
           value={value}          
         />
+        <hr className={styles.line} />
+        <FaqSection/>
       </div>
     </>
     // </StyledEngineProvider>

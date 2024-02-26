@@ -4,3 +4,7 @@
   flex-direction: column;      
   gap: 32px;
 }
+
+.line{ 
+  border-color: #34c94b;
+}
